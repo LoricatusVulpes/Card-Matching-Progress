@@ -19,8 +19,15 @@ if(!Array.indexOf){
    return -1;
   }
 }
-
-
+   var score = 0;
+   var scoreUpdate;
+   //creates a function to display a score for the game
+updateScore()
+function updateScore()
+ {
+document.getElementsByTagName("p")[0].innerHTML = score;
+clearInterval(scoreUpdate);
+}
 (function($) {
   $.fn.quizyMemoryGame = function(options) {
     
@@ -68,7 +75,7 @@ if(!Array.indexOf){
     var h = opts.itemHeight;
     var m = opts.itemsMargin;
     var rowNum = Math.ceil(itemsNum/opts.colCount);
-    
+ 
     
     // FUNCTIONS **************************************************************
     // ************************************************************************
@@ -218,8 +225,14 @@ if(!Array.indexOf){
         var time = Math.round(delayShow/3);
         if(type=='wrong'){
           el = $('div#quizy-mg-msgwrong');
+		  //sets up the update to subtract 5 points from the score if the player gets a wrong answer
+		  score -=25;
+		  scoreUpdate = setInterval(function(){updateScore()},2000);
         }else if(type=='correct'){
           el = $('div#quizy-mg-msgcorrect');
+		  //sets up the interval to add 10 points if the player gets a correct answer
+		  score +=100;
+		  scoreUpdate = setInterval(function(){updateScore()},2000);
         }
         el.delay(time).fadeIn(time/2).delay(time/2).hide("explode", time/2);
       }
