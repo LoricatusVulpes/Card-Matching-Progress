@@ -1,0 +1,60 @@
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Exo+2:800italic,800,900,900italic);
+h2 {color:white;font-family: 'Exo 2', sans-serif;font-style:italic;font-size:30px;margin:5px 0 25px 200px;}
+body{
+	width:1000px;
+	margin:0 auto;
+	background-image:url(../img/theatre-stage.jpg);
+	
+	}
+
+#ns{
+	
+	background-image:url(../img/theater-lighting2.gif);
+	
+	background-position:center;
+	background-repeat:no-repeat;
+	display:block;
+	height:200px;
+	margin-top:50px;
+	/*background-color:#09F;*/
+	}
+	
+#txt{
+	font-family: 'Exo 2', sans-serif;
+	font-style:italic;
+	letter-spacing:1px;
+	font-size:95px;
+	color:white;
+	width:1000px;
+	margin:0 auto;
+		margin-top:50px;
+	/*background-color:#0F0;*/
+	}
+
+#ng{
+	background-image:url(../img/start.png);
+	background-repeat:no-repeat;
+	width:465px;
+	height:200px;
+	margin:0 auto;
+	cursor:pointer;
+	}
+#ng:hover{
+	background-image:url(../img/starthover.png);}
+#ng:active{
+	background-image:url(../img/starthover.png);}
+
+
+	
+#bi{
+	background-image:url(../img/bottom.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	margin-top:50px;
+	display:block;
+	height:350px;
+	width:100%;
+/*	background-color:#09F;
+*/	}
